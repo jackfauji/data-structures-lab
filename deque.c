@@ -1,3 +1,4 @@
+//implementing double ended queue(input restricted)
 #include<stdio.h>
 #define max 5
 int enq(int dq[],int r);
