@@ -4,6 +4,16 @@ typedef struct node{
 	int data;
 	struct node *next;
 }sn;
+sn* insert(sn *head)
+{
+    sn *newnode;
+    newnode=(sn*)malloc(sizeof(sn));
+    printf("enter data ");
+    scanf("%d",&newnode->data);
+    newnode->next=head;
+    head=newnode;
+    return head;
+}
 
 int main()
 {
@@ -28,10 +38,13 @@ int main()
 		printf("do you want to (0,1)?");
 		scanf("%d",&ch);
 	}
+	head=insert(head);
 	temp=head;
+	
 	while(temp!=0)
 	{
 		printf("%d ",temp->data);
 		temp=temp->next;
 	}
-}
+}	
+	
